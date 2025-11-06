@@ -1,0 +1,282 @@
+*{
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #1a1c21;
+}
+.head{
+    width: 80vw;
+    height: 20vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    left:0;
+}
+button{
+    width:12vw;
+    height:5vh;
+    border: none;              
+    padding: 5px 10px; 
+    margin: 15px;
+    background-color: transparent;
+    border: solid gainsboro 2px;         
+    border-radius: 8px;       
+    color: gainsboro;              
+    cursor: pointer;          
+    transition: background-color 0.3s ease; 
+}
+li{
+    color: gainsboro;
+    font-size: 12px;
+    margin: 10px;
+}
+
+input{
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown_background{
+    position: absolute;
+    width: 20vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown {
+    width: 20vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+
+  .dropdown>#toggle {
+    display: none;
+  }
+
+    .dropdown_button {
+    width:15vw;
+    height:10vh;
+    display: flex; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; 
+    border: none;              
+    margin: 30px auto 40px auto;
+    border: solid gainsboro 2px;          
+    border-radius: 8px;             
+    color: gainsboro;              
+    cursor: pointer;          
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    position: absolute; 
+    background-color: transparent; 
+    width: 100%; 
+    z-index: 1; 
+  }
+
+  .dropdown #toggle:checked ~ ul {
+    max-height: 750px; 
+  }
+
+  ul li {
+
+    background-color: transparent; 
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .dropdown ul li:last-child{
+    border-bottom: none;
+  }
+
+    .dropdown ul li #toggle {
+        display: none; 
+    }
+
+    .dropdown>ul>li>label{
+        display: flex; 
+        align-items: center;
+        cursor: pointer;
+        width: 100%; 
+    }
+
+.choise {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    margin: 10px 0;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    border: 2px solid gainsboro;
+    border-radius: 2px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    border: 2px solid darkgrey;
+    color: darkgrey;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 3px;
+
+    width: 4px;
+    height: 8px;
+    border: solid gainsboro;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.search{
+    width: 25vw;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 15px;
+    margin-left: 6vw;
+}
+.input_search{
+    height:5vh;
+    width: 50vw;
+    margin-top: 0px;
+    border-radius: 30px;
+    outline: none;
+    padding: 5px 10px; 
+    margin: 15px;
+    background-color: gainsboro; 
+}
+.button_search{
+    width:12vw;
+    height:5vh;
+    background-color: transparent; 
+    border: none;              
+    padding: 5px 10px; 
+    margin: 15px;
+    border: solid gainsboro 2px;      
+    border-radius: 8px;       
+    color: gainsboro;              
+    cursor: pointer;          
+}
+
+.dropdown_button:hover {
+    border: solid darkgrey 2px; 
+    color: darkgrey;
+}
+#toggle:hover {
+    border: solid darkgrey 2px;
+    color: darkgrey;    
+}
+button:hover {
+    border: solid darkgrey 2px;    
+    color: darkgrey; 
+}
+.button_search:hover{
+    border: solid darkgrey 2px;  
+    color: darkgrey;
+}
+.checkbox-container:hover{
+    color: darkgrey;
+}
+
+.content{
+    width:80vw;
+    height:80vh;
+    background-color: #17191e;
+    bottom: 0;
+    left: 0;
+}
+
+#card{
+    width: 25vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border: solid gainsboro 2px;      
+    border-radius: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#card>div{
+    margin: 50px;
+}
+.input_login_password{
+    height: 5vh;
+    width: 20vw;
+    margin-top: 0px;
+    border-radius: 30px;
+    outline: none;
+    padding: 5px 10px; 
+    margin: 15px;
+    background-color: gainsboro; 
+}
+.button_login_registration{
+    width:20vw;
+    height:5vh;
+    background-color: transparent; 
+    border: none;              
+    padding: 5px 10px; 
+    margin: 15px;
+    border: solid gainsboro 2px;      
+    border-radius: 8px;       
+    color: gainsboro;              
+    cursor: pointer; 
+}
